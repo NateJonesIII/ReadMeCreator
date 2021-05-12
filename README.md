@@ -6,7 +6,7 @@
     Create a ReadMe.md file for your project
 
     ##Table of contents 
-    [Installation](#installation)
+    [Installation](#Installation)
     [Usage](#usage)
     [Contributing](#contributing)
     [Tests](#tests)
