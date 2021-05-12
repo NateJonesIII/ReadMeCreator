@@ -1,32 +1,37 @@
 
-    # ReadMeGenerator                   [![License](https://www.apache.org/foundation/press/kit/img/20th-anniversary-badge/APACHE-20th-badge-2-cmyk.svg)](https://opensource.org/licenses/Apache-2.0)
-
+    [![License](https://www.apache.org/foundation/press/kit/img/20th-anniversary-badge/APACHE-20th-badge-2-cmyk.svg)](https://opensource.org/licenses/Apache-2.0)
+    # readMeGenerator-Project                   
 
     ## Description
-    Create a ReadMe.md file for your project
+    A tool to generate a ReadMe.md file
 
-    ##Table of contents 
-    [Installation](#Installation)
+    ## Table of contents 
+    [Installation](#installation)
+
     [Usage](#usage)
+
     [Contributing](#contributing)
+
     [Tests](#tests)
+
     [License](#license)
+    
     [Questions](#questions)
 
     ## Installation
-    node.js, npm inquirer, and fs
+    - To create a readme file for a github project
     
     ## Usage
-    To create a professional readme file for upload to github
+    - Utilizing node.js, npm inquirer, and npm fs
    
     ## Contributing
-    Nate Jones
+    - Nate Jones
 
     ## Tests
-    I've tested this on my Mac and Windows machines on bash and powershell
+    - Tested in terminal on Mac and Windows 
 
     ## License
-    Licensed under the Apache License, Version 2.0 (the "License");
+    - Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
     
@@ -39,6 +44,7 @@
     limitations under the License.
 
     ## Questions
+
     Link to my github: https://github.com/natejonesiii
     For further questions please email me at 15nate.jones@gmail.com
     
