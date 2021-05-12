@@ -49,7 +49,7 @@ inquirer.prompt([
         message: "Please enter your email: "
     }
 ]).then(result => {
-    console.log(`Title:${result.title} \n Description:${result.description} \n Installtion:${result.install} Usage:${result.usage} \n Contributions:${result.contribution} \n Tests:${result.test} \n License:${result.license} \n`);
+    console.log(`Title:${result.title} \n Description:${result.description} \n Installtion:${result.install} \n Usage:${result.usage} \n Contributions:${result.contribution} \n Tests:${result.test} \n License:${result.license} \n`);
 
     //License text for assigned choices
     const none = "N/A";
@@ -106,7 +106,7 @@ inquirer.prompt([
     DEALINGS IN THE SOFTWARE.` ;
 
     //Badge URL's for license 
-    const apacheBadge = `[![License](https://www.apache.org/foundation/press/kit/img/20th-anniversary-badge/APACHE-20th-badge-2-cmyk.svg)](https://opensource.org/licenses/Apache-2.0)`;
+    const apacheBadge = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
     const openBsdBadge = `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)] (https://opensource.org/licenses/BSD-3-Clause)`;
     const perlBadge = `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)] (https://opensource.org/licenses/Artistic-2.0)`;
     const boostBadge = `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
@@ -133,45 +133,45 @@ inquirer.prompt([
 
     // Output template for readMe file
     const readme = `
-    ${badgeContainer}
-    # ${result.title}                   
+${badgeContainer}
+# ${result.title}                   
 
-    ## Description
-    ${result.description}
+## Description
+${result.description}
 
-    ## Table of contents 
-    [Installation](#installation)
+## Table of contents 
+[Installation](#installation)
 
-    [Usage](#usage)
+[Usage](#usage)
 
-    [Contributing](#contributing)
+[Contributing](#contributing)
 
-    [Tests](#tests)
+[Tests](#tests)
 
-    [License](#license)
-    
-    [Questions](#questions)
+[License](#license)
 
-    ## Installation
-    - ${result.install}
-    
-    ## Usage
-    - ${result.usage}
-   
-    ## Contributing
-    - ${result.contribution}
+[Questions](#questions)
 
-    ## Tests
-    - ${result.test}
+## Installation
+- ${result.install}
 
-    ## License
-    - ${licenseContainer}
+## Usage
+- ${result.usage}
 
-    ## Questions
+## Contributing
+- ${result.contribution}
 
-    Link to my github: https://github.com/${result.gitName}
-    For further questions please email me at ${result.email}
-    `;
+## Tests
+- ${result.test}
+
+## License
+- ${licenseContainer}
+
+## Questions
+
+Link to my github: https://github.com/${result.gitName}
+For further questions please email me at ${result.email}
+`;
 
     //Saving file to external README.md
     fs.writeFile("README.md", readme, (err) => {

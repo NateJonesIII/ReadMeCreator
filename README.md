@@ -1,37 +1,37 @@
 
-    [![License](https://www.apache.org/foundation/press/kit/img/20th-anniversary-badge/APACHE-20th-badge-2-cmyk.svg)](https://opensource.org/licenses/Apache-2.0)
-    # readMeGenerator-Project                   
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# readMeGenerator-Project                   
 
-    ## Description
-    A tool to generate a ReadMe.md file
+## Description
+A tool to generate a ReadMe.md file
 
-    ## Table of contents 
-    [Installation](#installation)
+## Table of contents 
+[Installation](#installation)
 
-    [Usage](#usage)
+[Usage](#usage)
 
-    [Contributing](#contributing)
+[Contributing](#contributing)
 
-    [Tests](#tests)
+[Tests](#tests)
 
-    [License](#license)
-    
-    [Questions](#questions)
+[License](#license)
 
-    ## Installation
-    - To create a readme file for a github project
-    
-    ## Usage
-    - Utilizing node.js, npm inquirer, and npm fs
-   
-    ## Contributing
-    - Nate Jones
+[Questions](#questions)
 
-    ## Tests
-    - Tested in terminal on Mac and Windows 
+## Installation
+- Utilizing node.js, npm inquirer, npm fs, and shieldio
 
-    ## License
-    - Licensed under the Apache License, Version 2.0 (the "License");
+## Usage
+- You use it in terminal to generate a readme.md file for your github project
+
+## Contributing
+- Nate Jones
+
+## Tests
+- Tested in terminal on Mac and Windows
+
+## License
+- Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
     
@@ -43,8 +43,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 
-    ## Questions
+## Questions
 
-    Link to my github: https://github.com/natejonesiii
-    For further questions please email me at 15nate.jones@gmail.com
-    
+Link to my github: https://github.com/natejonesiii
+For further questions please email me at 15nate.jones@gmail.com
