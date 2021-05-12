@@ -3,52 +3,52 @@ const fs = require("fs");
 
 inquirer.prompt([
     {
-        type:"input",
-        name:"title",
-        message:"What is the project title? "
+        type: "input",
+        name: "title",
+        message: "What is the project title? "
     },
     {
-        type:"input",
-        name:"description",
-        message:"What is the project description? "
+        type: "input",
+        name: "description",
+        message: "What is the project description? "
     },
     {
-        type:"input",
-        name:"install",
-        message:"What are the installation instructions? "
+        type: "input",
+        name: "install",
+        message: "What are the installation instructions? "
     },
     {
-        type:"input",
-        name:"usage",
-        message:"How do you use the project? "
+        type: "input",
+        name: "usage",
+        message: "How do you use the project? "
     },
     {
-        type:"input",
-        name:"contribution",
-        message:"What are the contributions? "
+        type: "input",
+        name: "contribution",
+        message: "What are the contributions? "
     },
     {
-        type:"input",
-        name:"test",
-        message:"Please enter the project test instructions "
+        type: "input",
+        name: "test",
+        message: "Please enter the project test instructions "
     },
     {
-        type:"list",
-        name:"license",
-        message:"Select a license",
-        choices:["none","apache", "openbsd", "perl", "boost"]
+        type: "list",
+        name: "license",
+        message: "Select a license",
+        choices: ["none", "apache", "openbsd", "perl", "boost"]
     },
     {
-        type:"input",
-        name:"gitName",
-        message:"Please enter your github account name: "
+        type: "input",
+        name: "gitName",
+        message: "Please enter your github account name: "
     },
     {
-        type:"input",
-        name:"email",
-        message:"Please enter your email: "
+        type: "input",
+        name: "email",
+        message: "Please enter your email: "
     }
-]).then(result=>{
+]).then(result => {
     console.log(`Title:${result.title} \n Description:${result.description} \n Installtion:${result.install} Usage:${result.usage} \n Contributions:${result.contribution} \n Tests:${result.test} \n License:${result.license} \n`);
 
     //License text for assigned choices
@@ -83,7 +83,7 @@ inquirer.prompt([
     I consider linking in C subroutines in this manner to be the moral equivalent of defining subroutines in the Perl language itself. You may sell such an object file as proprietary provided that you provide or offer to provide the Perl source, as specified by the GNU General Public License. (This is merely an alternate way of specifying input to the program.) You may also sell a binary produced by the dumping of a running Perl script that belongs to you, provided that you provide or offer to provide the Perl source as specified by the GPL. 
     (The fact that a Perl interpreter and your code are in the same binary file is, in this case, a form of mere aggregation.)`;
 
-    const boostLicense =`Permission is hereby granted, free of charge, to any person or organization
+    const boostLicense = `Permission is hereby granted, free of charge, to any person or organization
     obtaining a copy of the software and accompanying documentation covered by
     this license (the "Software") to use, reproduce, display, distribute,
     execute, and transmit the Software, and to prepare derivative works of the
@@ -111,63 +111,70 @@ inquirer.prompt([
     const perlBadge = `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)] (https://opensource.org/licenses/Artistic-2.0)`;
     const boostBadge = `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
 
-    var badgeContainer= "";
-    var licenseContainer ="";
+    var badgeContainer = "";
+    var licenseContainer = "";
 
     //"none","apache", "openbsd", "perl", "boost"
-    if(result.license === "apache"){
+    if (result.license === "apache") {
         badgeContainer = apacheBadge;
         licenseContainer = apacheLicense;
-    }else if(result.license === "openbsd"){
+    } else if (result.license === "openbsd") {
         badgeContainer = openBsdBadge;
         licenseContainer = openBsdLicense;
-    }else if(result.license === "perl"){
+    } else if (result.license === "perl") {
         badgeContainer = perlBadge;
         licenseContainer = perlLicense;
-    }else if(result.license === "boost"){
+    } else if (result.license === "boost") {
         badgeContainer = boostBadge;
         licenseContainer = boostLicense;
-    }else{
+    } else {
         licenseContainer = "N/A";
     }
 
     // Output template for readMe file
     const readme = `
-    # ${result.title}                   ${badgeContainer}
-
+    ${badgeContainer}
+    # ${result.title}                   
 
     ## Description
     ${result.description}
 
-    ##Table of contents 
+    ## Table of contents 
     [Installation](#installation)
+
     [Usage](#usage)
+
     [Contributing](#contributing)
+
     [Tests](#tests)
+
     [License](#license)
+    
     [Questions](#questions)
 
     ## Installation
-    ${result.install}
+    - ${result.install}
     
     ## Usage
-    ${result.usage}
+    - ${result.usage}
    
     ## Contributing
-    ${result.contribution}
+    - ${result.contribution}
 
     ## Tests
-    ${result.test}
+    - ${result.test}
 
     ## License
-    ${licenseContainer}
+    - ${licenseContainer}
 
     ## Questions
+
     Link to my github: https://github.com/${result.gitName}
     For further questions please email me at ${result.email}
     `;
+
     //Saving file to external README.md
-    fs.writeFile("README.md", readme, (err)=>{
-        err ? console.log(err): console.log("File saved successful");
+    fs.writeFile("README.md", readme, (err) => {
+        err ? console.log(err) : console.log("File saved successful");
     });
 });
